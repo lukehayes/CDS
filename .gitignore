@@ -113,4 +113,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+bin/app
+
 # End of https://www.toptal.com/developers/gitignore/api/c++,cmake,linux,vim,windows
