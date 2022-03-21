@@ -1,8 +1,15 @@
 #include "stack/stack.h"
 
+static size_t stackCounter = 0;
+
+static void IncreaseCounter()
+{
+    stackCounter += 1;
+}
+
 Stack StackCreate(size_t size, DataType type)
 {
-   size_t stackSize = 0;  
+   size_t stackSize = 0;
 
    switch(type)
    {
@@ -50,8 +57,9 @@ void StackInsert(Stack* stack, void* value)
             break;
 
         case INT:
-            stack->data = (int*)value;
-            stack->top = (int*)stack->data + 0;
+            stack->data = value;
+            stack->top = stack->data + stackCounter;
+            IncreaseCounter();
             break;
 
         case FLOAT:
