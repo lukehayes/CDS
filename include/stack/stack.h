@@ -2,15 +2,7 @@
 #define CDS_STACK_H
 
 #include <stdlib.h>
-
-typedef enum DataType 
-{
-    CHAR,
-    INT,
-    FLOAT,
-    DOUBLE
-
-} DataType;
+#include "DataType.h"
 
 typedef struct Stack 
 {
