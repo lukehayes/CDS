@@ -5,7 +5,7 @@
 
 typedef struct List
 {
-    Node* next;
+    Node* head;
 }List;
 
 
