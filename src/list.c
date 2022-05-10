@@ -7,3 +7,9 @@ List* ListCreate(size_t size, DataType type)
     list->head = NULL;
     return list;
 }
+
+void ListDestroy(List* list)
+{
+    free(list);
+    list = NULL;
+}
