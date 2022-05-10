@@ -28,4 +28,6 @@ List* ListCreate(size_t size, DataType type);
  */
 void ListDestroy(List* list);
 
+void ListInsert(List* list, Node* node);
+
 #endif // CDS_LIST_H
