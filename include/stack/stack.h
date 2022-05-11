@@ -32,6 +32,6 @@ Stack StackCreate(size_t size, DataType type);
  */
 void  StackDestroy(Stack* stack);
 
-void StackInsert(Stack* stack, void* value);
+void StackInsert(Stack* stack, void* value, DataType type);
 
 #endif

@@ -1,4 +1,5 @@
 #include "stack/stack.h"
+#include <stdio.h>
 
 static size_t stackCounter = 0;
 
@@ -46,7 +47,7 @@ void  StackDestroy(Stack* stack)
     stack->data = NULL;
 }
 
-void StackInsert(Stack* stack, void* value)
+void StackInsert(Stack* stack, void* value, DataType type)
 {
    void* v = NULL;
 
@@ -57,7 +58,9 @@ void StackInsert(Stack* stack, void* value)
             break;
 
         case INT:
-            stack->data = value;
+            stack->data = (int*)malloc(sizeof(int));
+            *stack->data = (int*)value;
+
             stack->top = stack->data + stackCounter;
             IncreaseCounter();
             break;
