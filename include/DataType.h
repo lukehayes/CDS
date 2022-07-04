@@ -2,8 +2,7 @@
 #define DATA_TYPE_H
 
 /**
- * An enum that represents the data type
- * the data structure might hold to aid
+ * An enum that represents the data type the data structure might hold to add
  * a more 'generic' type feel.
  */
 typedef enum DataType 
