@@ -59,8 +59,7 @@ void StackInsert(Stack* stack, void* value, DataType type)
 
         case INT:
             stack->data = (int*)malloc(sizeof(int));
-            *stack->data = (int*)value;
-
+            *(int*)stack->data = (int*)value;
             stack->top = stack->data + stackCounter;
             IncreaseCounter();
             break;
@@ -75,3 +74,7 @@ void StackInsert(Stack* stack, void* value, DataType type)
    }
 }
 
+void StackPop(Stack* stack, DataType type)
+{
+
+}
